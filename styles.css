@@ -5,9 +5,11 @@
 }
 
 body {
-    background-color: #081b29;
-    color: white;
-
+    background: linear-gradient(135deg, #081b29 0%, #1e3557 100%);
+    color: #ededed;
+    font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 15px;
 }
 
 .header {
@@ -16,8 +18,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
+    padding: 20px 6%;
+    background: rgba(8, 27, 41, 0.85);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    border-bottom: 1px solid #00abf0;
+    border-radius: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,76 +30,86 @@ body {
 }
 
 #Heading {
-    font-size: xx-large;
-    color: rgb(255, 2, 2);
-    font-family: "Ubuntu";
-    color: #ededed;
-    font-weight: 800;
+    font-size: 2rem;
+    color: #00abf0;
+    font-family: 'Ubuntu', 'Segoe UI', sans-serif;
+    font-weight: 900;
+    text-shadow: 0 2px 8px #000a, 0 1px 0 #00abf0;
 }
 
 .Navigation a {
-    font-size: 18px;
+    font-size: 1rem;
     color: #ededed;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Merriweather Sans', Arial, Helvetica, sans-serif;
     font-weight: 700;
     margin-left: 35px;
-    transition: .3s;
+    transition: color .3s, border-bottom .3s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
 }
 
-.Navigation a:hover
-
-/*,
-.Navigation a.active*/
-    {
+.Navigation a:hover, .Navigation a.active {
     color: #00abf0;
+    border-bottom: 2px solid #00abf0;
 }
 
 #Home {
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Open Sans";
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     padding: 0 10%;
+    position: relative;
+    background: none;
 }
 
 .Home-content {
     max-width: 600px;
+    background: rgba(30, 53, 87, 0.7);
+    padding: 32px 32px 24px 32px;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 #00abf033;
+    margin-bottom: 60px;
 }
 
 .Home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     line-height: 1.2;
+    text-shadow: 0 2px 8px #000a;
 }
 
 .Home-content h3 {
-    font-size: 32px;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #00abf0;
+    text-shadow: 0 1px 4px #000a;
 }
 
 .Home-content h4 {
-    line-height: 0.5;
-    font-size: 27px;
-    font-weight: lighter;
-    color: blanchedalmond;
+    line-height: 1.1;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ffe6b3;
     margin: 20px 0 40px;
 }
 
-
 .sub {
     color: #73a2ff;
-    font-size: xx-large;
-    font-family: "Merriweather Sans", "consolas", "sans-serif";
-    font-weight: bolder;
+    font-size: 1.2rem;
+    font-family: 'Merriweather Sans', 'Consolas', 'sans-serif';
+    font-weight: 900;
 }
 
 .Home-content .Button-box {
     display: flex;
     justify-content: space-between;
     width: 345px;
-    height: 50px;
+    height: 44px;
+    margin-bottom: 16px;
 }
 
 .Button-box a {
@@ -104,20 +119,24 @@ body {
     align-items: center;
     width: 150px;
     height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
+    background: linear-gradient(90deg, #00abf0 60%, #73a2ff 100%);
+    border: none;
     border-radius: 8px;
-    font-size: 19px;
+    font-size: 1.1rem;
     color: #081b29;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     z-index: 1;
     overflow: hidden;
+    box-shadow: 0 2px 12px #00abf055;
+    transition: background .4s, color .4s, box-shadow .4s;
 }
 
 .Button-box a:hover {
     color: #00abf0;
+    background: #081b29;
+    box-shadow: 0 4px 24px #00abf099;
 }
 
 .Button-box a::before {
@@ -134,16 +153,17 @@ body {
 
 .Button-box a:hover::before {
     width: 100%;
-
-
 }
 
 .Home-links {
-    position: absolute;
-    bottom: 40px;
+    position: static;
+    margin-top: 0;
     width: 170px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
 .Home-links a {
@@ -151,75 +171,146 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
+    width: 44px;
+    height: 44px;
+    background: rgba(0,171,240,0.08);
     border: 2px solid #00abf0;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 1.3rem;
     color: #00abf0;
     text-decoration: none;
+    box-shadow: 0 2px 8px #00abf022;
+    transition: background .3s, color .3s, box-shadow .3s;
 }
 
-#About {
-    font-size: 24px;
+.Home-links a:hover {
+    background: #00abf0;
+    color: #081b29;
+    box-shadow: 0 4px 16px #00abf055;
 }
 
-.About-content {
-    height: 50vh;
-    max-width: 800;
+#About, #Skills, #Education, #Contact {
+    font-size: 1.5rem;
+    margin-top: 64px;
+    margin-bottom: 24px;
+    text-shadow: 0 1px 4px #000a;
+}
+
+.About-content, .Skills-content, .Education-content, .Contact-content {
+    min-height: 40vh;
+    max-width: 900px;
+    margin: 0 auto 48px auto;
+    background: rgba(30, 53, 87, 0.7);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 #00abf033;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 8%;
+    padding: 32px 6%;
+    gap: 32px;
 }
 
-.About-content p{
+.About-content p, .Skills-content ul, .Education-content ul, .Contact-content ul {
     width: 60%;
+    font-size: 1.1rem;
 }
 
-.About-content img {
-    border: 1px solid #00abf0;
+.About-content img, .Skills-content img, .Education-content img, .Contact-content img {
+    border: 3px solid #00abf0;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    box-shadow: 0 2px 16px #00abf055;
     transition: .5s;
 }
 
-.About-content img:hover {
-    border: 2px solid #00abf0;
-    border-radius: 5px;
-    scale: 1.1;
-    box-shadow: 0px 0px 3px 3px #00abf0;
+.About-content img:hover, .Skills-content img:hover, .Education-content img:hover, .Contact-content img:hover {
+    border: 3px solid #73a2ff;
+    scale: 1.08;
+    box-shadow: 0px 0px 12px 6px #00abf0;
 }
 
 .Skills-content {
-    height: 50vh;
-    font-size: 24px;
+    font-size: 1.2rem;
     list-style-type: none;
-    display: flex;
-    align-items: center;
-    max-width: 800;
-    padding: 0 10%;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
-.Education-content {
-    height: 50vh;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    max-width: 800;
-    padding: 0 10%
+.Education-content, .Contact-content {
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
-.Contact-content {
-    height: 50vh;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    max-width: 800;
-    padding: 0 10%;
-    list-style-type: none;
+.Contact-content a {
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .3s;
+}
 
-    a {
-        color: white;
-        text-decoration: none;
+.Contact-content a:hover {
+    color: #00abf0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .About-content, .Skills-content, .Education-content, .Contact-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 4%;
+        gap: 20px;
     }
+    .Home-content {
+        padding: 24px 12px;
+        margin-bottom: 48px;
+    }
+    .header {
+        padding: 20px 2%;
+    }
+    .Home-links {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 2%;
+    }
+    .Navigation a {
+        margin-left: 0;
+        margin-right: 18px;
+        font-size: 0.95rem;
+    }
+    .Home-content h1 {
+        font-size: 1.3rem;
+    }
+    .Home-content h3 {
+        font-size: 1rem;
+    }
+    .Home-content h4 {
+        font-size: 0.9rem;
+    }
+    .About-content img, .Skills-content img, .Education-content img, .Contact-content img {
+        width: 80px;
+        height: 80px;
+    }
+    .About-content, .Skills-content, .Education-content, .Contact-content {
+        padding: 12px 2%;
+    }
+    .Home-links {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 16px;
+    }
+}
+
+html {
+  scroll-behavior: smooth;
 }
