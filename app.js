@@ -13,23 +13,23 @@ const profile = {
 const skills = [
   {
     title: "Languages",
-    items: ["JavaScript", "Python", "C++", "C", "Java", "HTML5", "CSS"],
+    items: ["JavaScript", "C++", "C", "Java", "Python"],
   },
   {
-    title: "Frameworks & Tools",
-    items: ["React", "Tailwind CSS", "GitHub", "VS Code", "Postman", "MongoDB Compass"],
+    title: "Developer Tools",
+    items: ["GitHub", "Visual Studio Code", "Postman", "MongoDB Compass", "Git", "Jupyter Notebook", "Linux"],
   },
   {
-    title: "ML & Data",
-    items: ["Scikit-Learn", "NLTK", "SpaCy", "XGBoost", "Pandas", "NumPy"],
+    title: "Frameworks & Libraries",
+    items: ["React", "Tailwind CSS", "Pandas", "Scikit-Learn", "TensorFlow", "Keras", "Seaborn"],
   },
   {
     title: "CS Fundamentals",
     items: ["Data Structures and Algorithms", "Operating Systems", "Database Management Systems"],
   },
   {
-    title: "Working Style",
-    items: ["Problem solving", "Communication", "Team collaboration", "Time management"],
+    title: "Soft Skills",
+    items: ["Problem-Solving", "Effective Communication", "Team Collaboration", "Time Management"],
   },
 ];
 
