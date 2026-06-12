@@ -13,11 +13,15 @@ const profile = {
 const skills = [
   {
     title: "Languages",
-    items: ["JavaScript", "C++", "C", "Java", "HTML5", "CSS"],
+    items: ["JavaScript", "Python", "C++", "C", "Java", "HTML5", "CSS"],
   },
   {
     title: "Frameworks & Tools",
     items: ["React", "Tailwind CSS", "GitHub", "VS Code", "Postman", "MongoDB Compass"],
+  },
+  {
+    title: "ML & Data",
+    items: ["Scikit-Learn", "NLTK", "SpaCy", "XGBoost", "Pandas", "NumPy"],
   },
   {
     title: "CS Fundamentals",
@@ -52,6 +56,18 @@ const projects = [
       "Added search, filter, and sort flows using query parameters and MongoDB indexing.",
       "Protected routes with JWT authentication and secure token storage.",
       "Optimized the UI for mobile and desktop, with reported 90+ Google PageSpeed performance.",
+    ],
+  },
+  {
+    title: "Customer Review Sentiment Analysis",
+    href: profile.github,
+    stack: ["Python", "Scikit-Learn", "NLTK", "SpaCy", "XGBoost", "Pandas", "NumPy"],
+    summary:
+      "An end-to-end machine learning pipeline for ingesting, preprocessing, and classifying high-volume customer feedback into sentiment signals.",
+    details: [
+      "Built text-mining workflows with custom tokenization, lemmatization, and Word2Vec embeddings for richer semantic features.",
+      "Reduced majority-class bias by applying SMOTE to rebalance skewed sentiment datasets before model training.",
+      "Evaluated models with K-fold cross-validation, reaching 92%+ F1-score and 0.89 AUC-ROC on unseen feedback.",
     ],
   },
 ];
@@ -206,7 +222,7 @@ function App() {
       ),
       h(
         Section,
-        { id: "projects", eyebrow: "Projects", title: "Backend depth with full-stack range." },
+        { id: "projects", eyebrow: "Projects", title: "Backend systems, full-stack products, and applied ML." },
         h(
           "div",
           { className: "project-grid" },
