@@ -60,7 +60,7 @@ const projects = [
   },
   {
     title: "Customer Review Sentiment Analysis",
-    href: profile.github,
+    href: "https://github.com/StackOverLord27/customer-sentiment-analysis",
     stack: ["Python", "Scikit-Learn", "NLTK", "SpaCy", "XGBoost", "Pandas", "NumPy"],
     summary:
       "An end-to-end machine learning pipeline for ingesting, preprocessing, and classifying high-volume customer feedback into sentiment signals.",
